@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AlgorithmTabRoot>
+    <Tabs>
+        <Tab Name="Tab_Basic Params">
+            <Categorys>
+                <GroupLinkItem Name="ImageSourceGroup">
+                    <LinkName>ImageSourceGroup</LinkName>
+                </GroupLinkItem>
+            </Categorys>
+        </Tab>
+        <Tab Name="Tab_Run Params">
+            <Categorys>
+                <Category Name="Tab_Run Params">
+                    <Items>
+                        <Boolean Name="forPeople" NameSpace="Standard">
+                            <AlgorithmIndex>0</AlgorithmIndex>
+                            <CurValue>False</CurValue>
+                            <DefaultValue>False</DefaultValue>
+                            <Description>给人看</Description>
+                            <DisplayName>给人看</DisplayName>
+                            <Visibility>Expect</Visibility>
+                            <AccessMode>RW</AccessMode>
+                        </Boolean>
+                    </Items>
+                </Category>
+            </Categorys>
+        </Tab>
+        <Tab Name="Tab_Result Show">
+            <Categorys>
+                <Category Name="Tab_Image Display">
+                    <Items>
+                        <ImageViewConfig Name="CheckZone">
+                            <Description>ROI</Description>
+                            <DisplayName>RunParam_ROI</DisplayName>
+                            <Visibility>Beginner</Visibility>
+                            <AccessMode>O</AccessMode>
+                            <BrigdgeSetter>
+                                <TargetName>BridgeObj</TargetName>
+                                <OperationName>GetDisplayObjectOperation</OperationName>
+                                <OperationParams>ROI</OperationParams>
+                            </BrigdgeSetter>
+                        </ImageViewConfig>
+                    </Items>
+                </Category>
+            </Categorys>
+        </Tab>
+    </Tabs>
+    <BottomExcuteButtonsLeft>
+        <Button_ResetAlgoParams Name="Button_ResetAlgoParams">
+            <Visibility>Beginner</Visibility>
+            <AccessMode>O</AccessMode>
+        </Button_ResetAlgoParams>
+    </BottomExcuteButtonsLeft>
+    <BottomExcuteButtons>
+        <GroupLinkItem Name="BottomCommandGroup">
+            <LinkName>BottomCommandGroup</LinkName>
+        </GroupLinkItem>
+    </BottomExcuteButtons>
+</AlgorithmTabRoot>

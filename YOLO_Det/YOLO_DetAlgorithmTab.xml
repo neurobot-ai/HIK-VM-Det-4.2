@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AlgorithmTabRoot>
+    <Tabs>
+        <Tab Name="Tab_Basic Params">
+            <Categorys>
+                <GroupLinkItem Name="ImageSourceGroup">
+                    <LinkName>ImageSourceGroup</LinkName>
+                </GroupLinkItem>
+            </Categorys>
+        </Tab>
+        <Tab Name="Tab_Run Params">
+            <Categorys>
+                <Category Name="Tab_Run Params">
+                    <Items>
+                        <Float Name="confThreShold" NameSpace="Standard">
+                            <Description>置信度阈值</Description>
+                            <DisplayName>置信度阈值</DisplayName>
+                            <AccessMode>RW</AccessMode>
+                            <MinValue>0</MinValue>
+                            <MaxValue>1</MaxValue>
+                            <CurValue>0.4</CurValue>
+                            <IncValue>0.1</IncValue>
+                        </Float>
+                        <Float Name="iouThreShold" NameSpace="Standard">
+                            <Description>iou阈值</Description>
+                            <DisplayName>iou阈值</DisplayName>
+                            <AccessMode>RW</AccessMode>
+                            <MinValue>0</MinValue>
+                            <MaxValue>1</MaxValue>
+                            <CurValue>0.45</CurValue>
+                            <IncValue>0.1</IncValue>
+                        </Float>
+                        <String Name="labelsPath">
+                            <MaxLen>255</MaxLen>
+                            <Description>标签路径</Description>
+                            <DisplayName>标签路径</DisplayName>
+                            <AccessMode>RW</AccessMode>
+                            <CurValue>C:\\Users\\jushi\\Desktop\\myball\\names.txt</CurValue>
+                            <DefaultValue>C:\\Users\\jushi\\Desktop\\myball\\names.txt</DefaultValue>
+                        </String>
+                        <String Name="modelPath">
+                            <MaxLen>255</MaxLen>
+                            <Description>模型路径</Description>
+                            <DisplayName>模型路径</DisplayName>
+                            <AccessMode>RW</AccessMode>
+                            <CurValue>C:\\Users\\jushi\\Desktop\\myball\\ball.onnx</CurValue>
+                            <DefaultValue>C:\\Users\\jushi\\Desktop\\myball\\ball.onnx</DefaultValue>
+                        </String>
+                        <Boolean Name="useGPU" NameSpace="Standard">
+                            <AlgorithmIndex>0</AlgorithmIndex>
+                            <CurValue>True</CurValue>
+                            <DefaultValue>True</DefaultValue>
+                            <Description>使用cuda</Description>
+                            <DisplayName>使用cuda</DisplayName>
+                            <Visibility>Expect</Visibility>
+                            <AccessMode>RW</AccessMode>
+                        </Boolean>
+                    </Items>
+                </Category>
+            </Categorys>
+        </Tab>
+        <Tab Name="Tab_Result Show">
+            <Categorys>
+                <Category Name="Tab_Image Display">
+                    <Items>
+                        <ImageViewConfig Name="CheckZone">
+                            <Description>ROI</Description>
+                            <DisplayName>RunParam_ROI</DisplayName>
+                            <Visibility>Beginner</Visibility>
+                            <AccessMode>O</AccessMode>
+                            <BrigdgeSetter>
+                                <TargetName>BridgeObj</TargetName>
+                                <OperationName>GetDisplayObjectOperation</OperationName>
+                                <OperationParams>ROI</OperationParams>
+                            </BrigdgeSetter>
+                        </ImageViewConfig>
+                    </Items>
+                </Category>
+            </Categorys>
+        </Tab>
+    </Tabs>
+    <BottomExcuteButtonsLeft>
+        <Button_ResetAlgoParams Name="Button_ResetAlgoParams">
+            <Visibility>Beginner</Visibility>
+            <AccessMode>O</AccessMode>
+        </Button_ResetAlgoParams>
+    </BottomExcuteButtonsLeft>
+    <BottomExcuteButtons>
+        <GroupLinkItem Name="BottomCommandGroup">
+            <LinkName>BottomCommandGroup</LinkName>
+        </GroupLinkItem>
+    </BottomExcuteButtons>
+</AlgorithmTabRoot>

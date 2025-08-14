@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ToolBoxItemData>
+    <name>YOLO_Det</name>
+    <priority>100</priority>
+    <toolTip>YOLO_Det</toolTip>
+</ToolBoxItemData>

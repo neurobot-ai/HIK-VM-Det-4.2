@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParamRoot>
+    <Categorys>
+        <Category Name="Display" okcolor="#7cfc00" ngcolor="#ff0000">
+            <Items>
+                <Object Name="InputImage" Type="image" okcolor="#66ff00" ngcolor="#ff0000" hotcolor="#66ff00" opacity="1" linetype="1" linewidth="1" IsDisplay="true">
+                    <Features>
+                        <Feature Name="Image" Mapping="InImage" Value="{0}"/>
+                        <Feature Name="Height" Mapping="InImageHeight" Value="0"/>
+                        <Feature Name="Width" Mapping="InImageWidth" Value="0"/>
+                        <Feature Name="PixelFormat" Mapping="InImagePixelFormat" Value="0"/>
+                    </Features>
+                </Object>
+                <Object Name="OutputImage" Type="image" okcolor="#66ff00" ngcolor="#ff0000" hotcolor="#66ff00" opacity="1" linetype="1" linewidth="1" IsDisplay="true">
+                    <Features>
+                        <Feature Name="Image" Mapping="OutImage" Value="{0}"/>
+                        <Feature Name="Height" Mapping="OutImageHeight" Value="0"/>
+                        <Feature Name="Width" Mapping="OutImageWidth" Value="0"/>
+                        <Feature Name="PixelFormat" Mapping="OutImagePixelFormat" Value="0"/>
+                    </Features>
+                </Object>
+                <Object Name="ROI" Type="rect" okcolor="#66ff00" ngcolor="#ff0000" hotcolor="#66ff00" opacity="1" linetype="1" linewidth="1" IsDisplay="true" highLightEnable="false">
+                    <Features>
+                        <Feature Name="CenterX" Mapping="DetectCenterX" Value="0"/>
+                        <Feature Name="CenterY" Mapping="DetectCenterY" Value="0"/>
+                        <Feature Name="Width" Mapping="DetectWidth" Value="0"/>
+                        <Feature Name="Height" Mapping="DetectHeight" Value="0"/>
+                        <Feature Name="Angle" Mapping="DetectAngle" Value="0"/>
+                        <Feature Name="Tips" Mapping="DetectCenterX,DetectCenterY,DetectWidth,DetectHeight,DetectAngle" Value="CenterX:{0},CenterY:{1} Width:{2} Height:{3} Angle:{4}"/>
+                        <Feature Name="Status" Mapping="NULL" Value="1"/>
+                    </Features>
+                </Object>
+            </Items>
+        </Category>
+    </Categorys>
+</ParamRoot>
+
+

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParamRoot>
+    <Categorys>
+        <Category Name="Base">
+            <Items>
+                <String Name="ServerRepAddress">
+                    <CurValue>tcp://127.0.0.1:5555</CurValue>
+                </String>
+                <String Name="ModuleName">
+                    <CurValue>YOLO_Det</CurValue>
+                </String>
+                <Bool Name="IsLoalModule">
+                    <CurValue>0</CurValue>
+                </Bool>
+                <Integer Name="ModuleViewMode">
+                    <CurValue>1</CurValue>
+                </Integer>
+                <String Name="ModuleDisplayName">
+                    <CurValue>YOLO_Det</CurValue>
+                </String>
+                <String Name="ModuleHelp">
+                    <CurValue>Reserve</CurValue>
+                </String>
+                <String Name="IsSaveTabXml">
+                    <CurValue>False</CurValue>
+                </String>
+            </Items>
+        </Category>
+        <Category Name="Input">
+            <Items>
+                <Combination Name="InputImage" Style="IMAGE" AccessMode="RW">
+                    <Filters>
+                        <Filter Name="InImage" ValueType="image" IsForce="true" isShow="true" AccessMode="RO"/>
+                        <Filter Name="InImageWidth" ValueType="int" IsForce="true" isShow="true" AccessMode="RO"/>
+                        <Filter Name="InImageHeight" ValueType="int" IsForce="true" isShow="true" AccessMode="RO"/>
+                        <Filter Name="InImagePixelFormat" ValueType="int" IsForce="true" isShow="true" AccessMode="RO"/>
+                    </Filters>
+                </Combination>
+                <Combination Name="InputROI" Style="ROIBOX" AccessMode="RW">
+                    <Filters>
+                        <Combination Name="ROI CenterPoint" Style="POINT" AccessMode="RW">
+                            <Filters>
+                                <Filter Name="roicenterx" ValueType="float" IsForce="false" isShow="true" AccessMode="RW"/>
+                                <Filter Name="roicentery" ValueType="float" IsForce="false" isShow="true" AccessMode="RW"/>
+                            </Filters>
+                        </Combination>
+                        <Filter Name="roiwidth" ValueType="float" IsForce="false" isShow="true" AccessMode="RW"/>
+                        <Filter Name="roiheight" ValueType="float" IsForce="false" isShow="true" AccessMode="RW"/>
+                        <Filter Name="roiangle" ValueType="float" IsForce="false" isShow="true" AccessMode="RW"/>
+                    </Filters>
+                </Combination>
+            </Items>
+        </Category>
+        <Category Name="Output">
+            <Items>
+                <Filter Name="outputString" ValueType="string" IsForce="true" isShow="true" AccessMode="RW"/>
+                <Filter Name="ModuStatus" StructName="ModuStatus" ValueType="int" IsForce="true" isShow="true" AccessMode="RW"/>
+                <Combination Name="OutputImage" Style="IMAGE" AccessMode="RW">
+                    <Filters>
+                        <Filter Name="OutImage" ValueType="image" IsForce="true" isShow="true" AccessMode="RO"/>
+                        <Filter Name="OutImageWidth" ValueType="int" IsForce="true" isShow="true" AccessMode="RO"/>
+                        <Filter Name="OutImageHeight" ValueType="int" IsForce="true" isShow="true" AccessMode="RO"/>
+                        <Filter Name="OutImagePixelFormat" ValueType="int" IsForce="true" isShow="true" AccessMode="RO"/>
+                    </Filters>
+                </Combination>
+                <Combination Name="ROI" Style="ROIBOX" AccessMode="RW">
+                    <Filters>
+                        <Combination Name="DetectRectCenterPoint" Style="POINT" AccessMode="RO">
+                            <Filters>
+                                <Filter Name="DetectCenterX" ValueType="float" IsForce="false" isShow="true" AccessMode="RO"/>
+                                <Filter Name="DetectCenterY" ValueType="float" IsForce="false" isShow="true" AccessMode="RO"/>
+                            </Filters>
+                        </Combination>
+                        <Filter Name="DetectWidth" ValueType="float" IsForce="false" isShow="true" AccessMode="RO"/>
+                        <Filter Name="DetectHeight" ValueType="float" IsForce="false" isShow="true" AccessMode="RO"/>
+                        <Filter Name="DetectAngle" ValueType="float" IsForce="false" isShow="true" AccessMode="RO"/>
+                    </Filters>
+                </Combination>
+            </Items>
+        </Category>
+        <Category Name="TransmitInfo"/>
+    </Categorys>
+</ParamRoot>
